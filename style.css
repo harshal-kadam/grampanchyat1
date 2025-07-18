@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Mangal', sans-serif;
+  background-color:	#DCDCDC;
+  color: #222831;            /* dark primary text */
+}
+/* HEADER ONLY */
+
+header.webapp-header {
+  background: linear-gradient(120deg, #b3e5fc, #81d4fa);
+  padding: 20px 30px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #0D47A1;
+  animation: fadeInHeader 1.2s ease-in-out;
+}
+
+/* Header animation */
+@keyframes fadeInHeader {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header layout */
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo title area */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo image */
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Title text */
+.title-text h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #0D47A1;
+}
+
+.title-text p {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: #01579B;
+}
+
+/* Header Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 22px;
+  color: #0D47A1;
+  margin-top: 10px;
+}
+
+.icons a {
+  color: #0D47A1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #FF5722;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .icons {
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .title-text h1 {
+    font-size: 22px;
+  }
+
+  .title-text p {
+    font-size: 14px;
+  }
+}
+
+/* Nav */
+nav {
+  background-color: #FCE4EC; /* Soft Pink */
+  padding: 10px 15px;
+  margin: 12px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap; 
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 2px 6px rgba(57, 62, 70, 0.4);
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  color: #880E4F; /* Dark pink/red text */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 12px;
+  margin-right: 12px;
+  flex: 0 0 auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #00adb5; /* bright accent hover */
+  color: #222831;
+}
+main {
+  position: relative;
+  background-image: url('img/shetkari.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 30px;
+  border-radius: 15px;
+  color:  #1a1a1a; /* dark text for good contrast */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Add a white transparent overlay on top of the image */
+main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.65); /* white overlay, adjust opacity here */
+  z-index: -1;
+}
+
+
+
+
+h2 {
+  text-align: center;
+  color: #222831;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(34, 40, 49, 0.1);
+}
+
+/* Footer */
+  footer {
+      text-align: center;
+      background-color: #ccc;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+.poster-box {
+  background-color: #E0F7FA;
+  color: #004D40;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #00BCD4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color:#FFA000	;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #0097A7; /* hover effect */
+}
+
+.info-list li {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  /* Existing elements stay as is, adding 3D styles below */
+
+/* 3D shadow card effect for info blocks/posters */
+.info-block, .poster-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.info-block:hover, .poster-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 3D Button hover pop effect */
+.read-more-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+  background-color: #0097A7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header slight depth */
+header {
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav link pop effect */
+nav a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 173, 181, 0.3);
+}
+
+/* Image pop on hover */
+img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
